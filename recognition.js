@@ -85,7 +85,7 @@ function speak() {
                 break;
             }
         }
-        recognition.abort();
+        recognition.stop();
         synth.speak(utterThis);
     }
 }
