@@ -83,7 +83,7 @@ function speak() {
                 break;
             }
         }
-        recognition.stop();
+        recognition.abort();
         synth.speak(utterThis);
         recognition.start();
     }
