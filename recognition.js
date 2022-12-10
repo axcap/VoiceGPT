@@ -13,7 +13,7 @@ recognition.onresult = function (event) {
     var text = event.results[event.results.length - 1][0].transcript;
     diagnostic.textContent = 'Result received: ' + text + '.';
     console.log('Confidence: ' + event.results[0][0].confidence);
-    // speak();
+    speak();
 }
 
 
