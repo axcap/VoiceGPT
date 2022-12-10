@@ -11,7 +11,7 @@ var diagnostic = document.querySelector('.output');
 
 recognition.onresult = function (event) {
     var text = event.results[event.results.length - 1][0].transcript;
-    diagnostic.textContent = 'Result received: ' + text + '.';
+    diagnostic.textContent = text;
     console.log('Confidence: ' + event.results[0][0].confidence);
     speak();
 }
@@ -83,7 +83,9 @@ function speak() {
                 break;
             }
         }
+        recognition.stop();
         synth.speak(utterThis);
+        recognition.start();
     }
 }
 
