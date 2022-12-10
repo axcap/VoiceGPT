@@ -29,6 +29,7 @@ recognition.onnomatch = function (event) {
 }
 
 recognition.onerror = function (event) {
+    console.log(event);
     diagnostic.textContent = 'Error occurred in recognition: ' + event.error;
 }
 
