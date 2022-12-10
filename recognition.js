@@ -18,9 +18,10 @@ recognition.onresult = function (event) {
 
 
 recognition.onend = function () {
-    // setTimeout(() => {
-    //     recognition.start();
-    // }, 1000);
+    console.log("recognitoon ended")
+    setTimeout(() => {
+        recognition.start();
+    }, 1000);
 }
 
 recognition.onnomatch = function (event) {
@@ -85,7 +86,6 @@ function speak() {
         }
         recognition.abort();
         synth.speak(utterThis);
-        recognition.start();
     }
 }
 
